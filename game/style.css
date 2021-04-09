@@ -1,0 +1,5 @@
+canvas {  display: block; margin: 0 auto;
+    background-image: url(fon.png); 
+
+    cursor: url(aim.png) , default;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <style>
+    	* { padding: 20px; margin: 0; }
+    	canvas { background: rgb(189, 114, 114); display: block; margin: 0 auto; 
+
+    	cursor: url(assets/aim.png) , default;}
+
+
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script>
+	// JavaScript code goes here
+	var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var  x = 10;
+    var  y = 1;
+
+
+var duck = new Image();   // Create new img element
+duck.src = 'assets/duck.png';
+var bg = new Image();   // Create new img element
+bg.src = 'assets/bg.png';
+//var aim = new Image();   // Create new img element
+//aim.src = 'assets/aim.png';
+
+var audio = new Audio();
+audio.src = 'assets/vystrel.mp3'; 
+audio.autoplay = false;
+
+
+  
+ //addEventListener( "click" , audio.play()); 
+                                    
+
+
+
+   function playAudio() { 
+    audio.play(); 
+  } 
+
+
+    duck.onload = function (e)
+        {
+            ctx.drawImage(duck, 10, 10);
+        
+        }
+
+        
+//document.addEventListener("mousemove", mouseMoveHandler, false);
+
+/*window.onmousemove = function(event){
+  x =  event.clientX;
+  y = event.clientY;
+ }*/
+
+  function mouseMoveHandler(){
+ x =  event.clientX;
+  y = event.clientY;
+
+}
+
+
+
+// aim.onload = function (e)
+  //      {
+          
+    //        ctx.drawImage(aim, x, y);
+      //  }
+//ssetInterval(drawImage, 10);
+
+//console.log()
+</script>
+
+</body>
+</html>
